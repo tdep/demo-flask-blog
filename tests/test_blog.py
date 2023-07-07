@@ -40,7 +40,7 @@ def test_author_required(app, client, auth):
     assert b'href="/1/update"' not in client.get('/').data
 
 
-@pytest.mark.paramertrize('path', (
+@pytest.mark.parametrize('path', (
     '/2/update',
     '/2/delete',
 ))
